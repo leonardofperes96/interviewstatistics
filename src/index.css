@@ -103,16 +103,26 @@ ul {
 /* buttons */
 .btn {
   cursor: pointer;
-  padding: 0.35em 1em;
+  padding: 0.35em 0.75em;
   background: var(--light-purple);
   border-radius: 0.25em;
   transition: var(--transition);
-  font-size: 1.325rem;
   color: white;
+  font-size: 1.15rem;
+  border: none;
 }
 
-.btn:hover{
+.btn-form {
+  width: 100%;
+  margin-top: 1em;
+}
+
+.btn:hover {
   background: var(--dark-purple);
+}
+
+button:disabled {
+  cursor: not-allowed;
 }
 
 /* error/success messages */
@@ -133,6 +143,8 @@ ul {
   background: #348054;
 }
 
+/* container and pages styles */
+
 .container {
   width: var(--fluid-width);
   max-width: var(--max-width);
@@ -140,4 +152,37 @@ ul {
 }
 .full-page {
   min-height: 100vh;
+}
+
+/* form styles */
+.form {
+  width: 90vw;
+  background: var(--primary-white);
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2em 2em;
+  border-radius: var(--border-radius);
+}
+
+.form-row {
+  margin-bottom: 1em;
+}
+
+.form-label {
+  text-transform: capitalize;
+  letter-spacing: var(--letter-spacing);
+  font-size: 1.15rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.5em 1em;
+  background: var(--lightest-purple);
+  border: 1px solid transparent;
+  border-radius: var(--border-radius);
+  margin-top: 0.5em;
+}
+
+.form-input:focus {
+  outline: 1px solid var(--light-purple);
 }
