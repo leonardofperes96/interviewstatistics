@@ -1,0 +1,143 @@
+/* apply border-box to all the elements */
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+/* variables */
+:root {
+  /* main colors */
+  /* i get my main colors and get all the shades of them */
+  --lightest-purple: #efe7fb;
+  --light-purple: #5b0ed6;
+  --medium-purple: #1e1243;
+  --dark-purple: #15042f;
+  --light-green: #68ffa8;
+  --dark-green: #348054;
+  --dark-gray: #656c80;
+  --light-gray: #d1d4daf1;
+  --primary-white: #ffffff;
+  --light-red: #f8d7da;
+  --dark-red: #842029;
+
+  /*rest of vars */
+  --border-radius: 0.25em;
+  --letter-spacing: 1px;
+  --transition: 0.3s ease-in-out all;
+  --max-width: 1120px;
+  --fluid-width: 90vw;
+  --fixed-width: 600px;
+  --break-point: 992px;
+  --small-text: 0.8rem;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Roboto";
+  line-height: 1.7;
+  font-weight: 400;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Tipography */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+p {
+  /* give an maximum characters to all the paragraphs in order to read better */
+  max-width: 40em;
+}
+
+/* Default styles resets */
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* buttons */
+.btn {
+  cursor: pointer;
+  padding: 0.35em 1em;
+  background: var(--light-purple);
+  border-radius: 0.25em;
+  transition: var(--transition);
+  font-size: 1.325rem;
+  color: white;
+}
+
+.btn:hover{
+  background: var(--dark-purple);
+}
+
+/* error/success messages */
+.alert {
+  padding: 0.25rem 0.75rem;
+  margin-bottom: 1em;
+  border-color: transparent;
+  border-radius: var(--border-radius);
+}
+
+.alert-danger {
+  color: var(--light-red);
+  background: var(--dark-red);
+}
+
+.alert-success {
+  color: #95ffc2;
+  background: #348054;
+}
+
+.container {
+  width: var(--fluid-width);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.full-page {
+  min-height: 100vh;
+}
